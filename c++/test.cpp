@@ -9,21 +9,17 @@ using namespace  std;
 int main()
 {
     
-    vector<int> vec(10,0);
+    vector<int> vec(5,0);
     int sum;
 
     iota(vec.begin(), vec.end(), 1);
+    vec.erase(vec.begin(), vec.begin()+1);
 
-    while(vec.begin() != vec.end())
+    for(auto x : vec)
     {
-        vec.erase(vec.begin());
-        for(auto x : vec)
-        {
-            cout << x << " "; 
-        }
-        cout << endl;
+        cout << x << endl;
     }
-
+    
 
     return 0;
 }
